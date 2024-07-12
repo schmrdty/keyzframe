@@ -1,0 +1,36 @@
+//keyboard attempt type 1 with refresh
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="fc:frame" content="vNext" />
+    <meta property="fc:frame:image" content="http://...your-image.png" />
+    <meta property="fc:frame:button:1" content="Walk Forward (W)" />
+    <meta property="fc:frame:button:2" content="Strafe Left (A)" />
+    <meta property="fc:frame:button:3" content="Walk Reverse (S)" />
+    <meta property="fc:frame:button:4" content="Strafe Right (D)" />
+    <!-- Add more buttons as needed -->
+
+    <!-- Add logic to refresh the iframe every 31 seconds -->
+    <script type="text/javascript">
+        function refreshIframe() {
+            const gameFrame = document.getElementById('gameFrame');
+            if (gameFrame) {
+                const src = gameFrame.src;
+                gameFrame.src = '';
+                gameFrame.src = src;
+            }
+        }
+
+        // Refresh every 31 seconds (31000 milliseconds)
+        setInterval(refreshIframe, 31000);
+    </script>
+
+    <title>"Gametimeeeeeeeeeeee"</title>
+</head>
+<body>
+    <!-- Your page content goes here -->
+    <iframe id="gameFrame" src="https://classic.minecraft.net" width="800" height="600"></iframe>
+</body>
+</html>
